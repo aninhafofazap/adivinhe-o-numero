@@ -26,10 +26,20 @@ h3 {
     margin-top: 40px;
 }
 
+
+
 .box {
     border: 2px solid #E8F9FD;
     display: inline-block;
     font-size: 4em;
     padding: 10px;
     margin: 20px;
+}
+
+.btn-jogar {
+    padding: 8px 15px;
+    border: 0;
+    background: #E8F9FD;
+    border-radius: 5px;
+    margin-top: 20px;
 }
