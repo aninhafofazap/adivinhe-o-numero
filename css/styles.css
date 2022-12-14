@@ -16,6 +16,10 @@ h2 {
     font-size: 4em;
 }
 
+.fim {
+    color: #bf0603;
+}
+
 h3 {
     font-size: 2em;
     margin-top: 20px;
@@ -42,4 +46,5 @@ h3 {
     background: #E8F9FD;
     border-radius: 5px;
     margin-top: 20px;
+    color: #001219;
 }

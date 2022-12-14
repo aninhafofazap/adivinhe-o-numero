@@ -2,8 +2,20 @@ function verificaValorValido(chute) {
     const numero = +chute
 
     if (chuteInvalido(numero)) {
-        elementoChute.innerHTML += '<div>Valor inválido</div>'
-        return
+        if (chute.toUpperCase() === "GAME OVER") {
+
+            document.body.innerHTML =
+                `
+                <h2 class="fim">Game Over!!!</h2>
+                <h3>Pressione o botão para jogar novamente</h3>
+                <button id="jogar-novamente" class="btn-jogar" >Jogar novamente</button>
+                `
+            document.body.style.backgroundColor = "black";
+        } else {
+            elementoChute.innerHTML += '<div>Valor inválido</div>'
+
+        }
+
     }
     if (numeroMaiorOuMenor(numero)) {
         elementoChute.innerHTML += `
@@ -31,17 +43,16 @@ function verificaValorValido(chute) {
 }
 
 function chuteInvalido(numero) {
-    return Number.isNaN(numero)
+    return Number.isNaN(numero);
 }
 
 function numeroMaiorOuMenor(numero) {
     return numero > maiorValor || numero < menorValor
 }
 
-
-
-
-
-
-
+document.body.addEventListener('click', e => {
+    if (e.target.id == 'jogar-novamente') {
+        window.location.reload();
+    }
+})
 
